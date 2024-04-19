@@ -128,3 +128,32 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 5
+//* 
+
+console.log(`==================`);
+console.log(`Test 5`);
+console.log(`==================`);
+console.log(
+    `Try to add a null value and check that the capacity is not null`
+);
+
+expected = true;
+testCapacity = null;
+
+//Act
+airport.setCapacity(testCapacity);
+actual = (Number.isInteger(airport.capacity) ? true : false)
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
