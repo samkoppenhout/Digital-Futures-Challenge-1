@@ -2,7 +2,7 @@ import { assertEquals } from "./test-framework/test-framework.js";
 import airport from "../src/airport.js"
 
 // Define test variables
-let expected, actual, result, testCapacity, plane1 = {}, plane2 = {}, plane3 = {}, testPlane = {};
+let expected, actual, result, testCapacity, plane1 = {}, plane2 = {}, plane3 = {}, testPlane = {}, nullTest = null;
 
 //Clear Up Function
 const clearUp = () => {
@@ -540,7 +540,6 @@ console.log(
 
 //Arrange
 expected = true;
-airport.planeList = [];
 
 //Act
 airport.addPlane(testPlane);
@@ -575,6 +574,35 @@ airport.planeList = [plane1, plane2, plane3];
 //Act
 airport.addPlane(testPlane);
 actual = airport.planeList.includes(testPlane);
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+//? TEST 4:4
+//* Test that a null variable can't be added to the airport
+
+console.log(`==================`);
+console.log(`Test 4:4`);
+console.log(`==================`);
+console.log(
+    `Test that a null variable can't be added to the airport`
+);
+
+//Arrange
+expected = false;
+
+//Act
+airport.addPlane(nullTest);
+actual = airport.planeList.includes(nullTest);
 
 //Assert
 result = assertEquals(expected, actual);

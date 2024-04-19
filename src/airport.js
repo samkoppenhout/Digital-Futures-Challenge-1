@@ -11,7 +11,7 @@ const airport = {
         return this.planeList.includes(plane);
     },
     addPlane(plane) {
-        airport.planeList.push(plane);
+        !(plane === null) && airport.planeList.push(plane);
     }
 }
 
