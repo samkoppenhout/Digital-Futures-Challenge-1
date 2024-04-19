@@ -2,7 +2,7 @@ import { assertEquals } from "./test-framework/test-framework.js";
 import airport from "../src/airport.js"
 
 // Define test variables
-let expected, actual, result, testCapacity, plane1, plane2, plane3, testPlane;
+let expected, actual, result, testCapacity, plane1 = {}, plane2 = {}, plane3 = {}, testPlane = {};
 
 //Clear Up Function
 const clearUp = () => {
@@ -11,10 +11,11 @@ const clearUp = () => {
     result = undefined;
     airport.capacity = undefined;
     testCapacity = undefined;
-    plane1 = undefined;
-    plane2 = undefined;
-    plane3 = undefined;
-    testPlane = undefined;
+    airport.planeList = [];
+    plane1 = {};
+    plane2 = {};
+    plane3 = {};
+    testPlane = {};
 }
 
 //? USER STORY 1
@@ -429,3 +430,33 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 3:2
+//* Test that the function returns false if the plane list is not empty but does not contain the given plane
+
+console.log(`==================`);
+console.log(`Test 3:2`);
+console.log(`==================`);
+console.log(
+    `Test that the function returns false if the plane list is not empty but does not contain the given plane`
+);
+
+//Arrange
+expected = false;
+airport.planeList = [plane1,plane2,plane3];
+
+//Act
+actual = airport.searchForPlane(testPlane);
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
