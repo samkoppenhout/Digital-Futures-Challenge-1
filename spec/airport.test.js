@@ -13,11 +13,11 @@ const clearUp = () => {
 //? TEST 1
 //* Input an integer and check that the capacity is that integer
 
-console.log(`Test 1`);
+console.log(`==================`);
+console.log(`Test 1:`);
 console.log(`==================`);
 console.log(
-    `Input an integer and check that the capacity is that integer
-`
+    `Input an integer and check that the capacity is that integer`
 );
 
 //Arrange
@@ -34,7 +34,8 @@ result = assertEquals(expected, actual);
 //Report
 console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
-console.log(`==================`);
+console.log(`==================
+`);
 
 // Clear Up
 clearUp();
@@ -42,7 +43,8 @@ clearUp();
 //? TEST 2
 //* Define the capacity previously, input a new integer and check that the capacity is now the new integer
 
-console.log(`Test 2`);
+console.log(`==================`);
+console.log(`Test 2:`);
 console.log(`==================`);
 console.log(
     `Define the capacity previously, input a new integer and check that the capacity is now the new integer`
@@ -63,7 +65,37 @@ result = assertEquals(expected, actual);
 //Report
 console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+//? TEST 3
+//* 
+
 console.log(`==================`);
+console.log(`Test 3`);
+console.log(`==================`);
+console.log(
+    `Try to add a negative number and check that the capacity is not negative`
+);
+
+expected = true;
+testCapacity = -10;
+
+//Act
+airport.setCapacity(testCapacity);
+actual = (airport.capacity >= 0 ? true : false)
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
 
 // Clear Up
 clearUp();
