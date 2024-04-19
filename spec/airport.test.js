@@ -1,8 +1,10 @@
 import { assertEquals } from "./test-framework/test-framework.js";
 import airport from "../src/airport.js"
 
-let expected, actual, result, testCapacity;
+// Define test variables
+let expected, actual, result, testCapacity, plane1, plane2, plane3;
 
+//Clear Up Function
 const clearUp = () => {
     expected = undefined;
     actual = undefined;
@@ -219,6 +221,36 @@ console.log(
 //Arrange
 expected = false;
 airport.capacity = 10;
+
+//Act
+actual = airport.isFull();
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+//? TEST 2:2
+//* Test that the airport reports not full when the number of planes is between 0 and the given capacity
+
+console.log(`==================`);
+console.log(`Test 2:2`);
+console.log(`==================`);
+console.log(
+    `Test that the airport reports not full when the number of planes is between 0 and the given capacity`
+);
+
+//Arrange
+expected = false;
+airport.capacity = 10;
+airport.planeList = [plane1,plane2,plane3]
 
 //Act
 actual = airport.isFull();
