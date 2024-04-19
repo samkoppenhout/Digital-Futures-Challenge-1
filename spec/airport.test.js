@@ -396,6 +396,7 @@ console.log(`==================
 clearUp();
 
 
+
 //? USER STORY 3
 console.log(`==================`);
 console.log(`USER STORY 3:`);
@@ -476,6 +477,45 @@ airport.planeList = [plane1,plane2,plane3,testPlane];
 
 //Act
 actual = airport.searchForPlane(testPlane);
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+
+
+//? USER STORY 4
+console.log(`==================`);
+console.log(`USER STORY 4:`);
+console.log(`==================
+`);
+
+//? TEST 4:1
+//* Test that the number of planes has increased by one
+
+console.log(`==================`);
+console.log(`Test 4:1`);
+console.log(`==================`);
+console.log(
+    `Test that the number of planes has increased by one`
+);
+
+//Arrange
+expected = airport.planeList.length + 1;
+airport.planeList = [];
+testPlane = {}
+
+//Act
+airport.addPlane(testPlane);
+actual = airport.planeList.length;
 
 //Assert
 result = assertEquals(expected, actual);
