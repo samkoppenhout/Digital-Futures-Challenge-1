@@ -266,3 +266,33 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 2:3
+//* Test that the airport reports full when there more planes than the given capacity
+
+console.log(`==================`);
+console.log(`Test 2:3`);
+console.log(`==================`);
+console.log(
+    `Test that the airport reports full when there more planes than the given capacity`
+);
+
+//Arrange
+expected = true;
+airport.capacity = 2;
+airport.planeList = [plane1,plane2,plane3]
+
+//Act
+actual = airport.isFull();
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
