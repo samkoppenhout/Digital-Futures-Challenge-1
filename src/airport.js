@@ -6,6 +6,9 @@ const airport = {
     },
     isFull() {
         return (this.planeList.length >= this.capacity)
+    },
+    searchForPlane(plane) {
+        return this.planeList.includes(plane);
     }
 }
 

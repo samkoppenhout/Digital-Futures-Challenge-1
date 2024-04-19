@@ -2,17 +2,20 @@ import { assertEquals } from "./test-framework/test-framework.js";
 import airport from "../src/airport.js"
 
 // Define test variables
-let expected, actual, result, testCapacity, plane1, plane2, plane3;
+let expected, actual, result, testCapacity, plane1, plane2, plane3, testPlane;
 
 //Clear Up Function
 const clearUp = () => {
     expected = undefined;
     actual = undefined;
     result = undefined;
+    airport.capacity = undefined;
     testCapacity = undefined;
+    plane1 = undefined;
+    plane2 = undefined;
+    plane3 = undefined;
+    testPlane = undefined;
 }
-
-/*
 
 //? USER STORY 1
 console.log(`==================`);
@@ -91,12 +94,14 @@ console.log(
     `Try to add a negative number and check that the capacity is not negative`
 );
 
+//Arrange
+airport.capacity = 0;
 expected = true;
 testCapacity = -10;
 
 //Act
 airport.setCapacity(testCapacity);
-actual = (airport.capacity >= 0 ? true : false)
+actual = (airport.capacity >= 0)
 
 //Assert
 result = assertEquals(expected, actual);
@@ -120,6 +125,8 @@ console.log(
     `Try to add a fractional number and check that the capacity is not fractional`
 );
 
+//Arrange
+airport.capacity = 0;
 expected = true;
 testCapacity = 2.5;
 
@@ -149,6 +156,8 @@ console.log(
     `Try to add a null value and check that the capacity is not null`
 );
 
+//Arrange
+airport.capacity = 0;
 expected = true;
 testCapacity = null;
 
@@ -178,6 +187,8 @@ console.log(
     `Try to add a string and check that the capacity is not a string`
 );
 
+//Arrange
+airport.capacity = 0;
 expected = true;
 testCapacity = "test";
 
@@ -197,9 +208,6 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-
-
-*/
 
 
 //? USER STORY 2
@@ -373,6 +381,42 @@ airport.capacity = 0;
 
 //Act
 actual = airport.isFull();
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+
+//? USER STORY 3
+console.log(`==================`);
+console.log(`USER STORY 3:`);
+console.log(`==================
+`);
+
+//? TEST 3:1
+//* Test that the function returns false if the plane list is empty
+
+console.log(`==================`);
+console.log(`Test 3:1`);
+console.log(`==================`);
+console.log(
+    `Test that the function returns false if the plane list is empty`
+);
+
+//Arrange
+expected = false;
+airport.planeList = [];
+
+//Act
+actual = airport.searchForPlane(testPlane);
 
 //Assert
 result = assertEquals(expected, actual);
