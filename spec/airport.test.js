@@ -10,6 +10,12 @@ const clearUp = () => {
     testCapacity = undefined;
 }
 
+//? USER STORY 1
+console.log(`==================`);
+console.log(`USER STORY 1:`);
+console.log(`==================
+`);
+
 //? TEST 1
 //* Input an integer and check that the capacity is that integer
 
