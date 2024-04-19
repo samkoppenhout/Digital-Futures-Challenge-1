@@ -511,7 +511,6 @@ console.log(
 //Arrange
 expected = airport.planeList.length + 1;
 airport.planeList = [];
-testPlane = {}
 
 //Act
 airport.addPlane(testPlane);
@@ -542,7 +541,36 @@ console.log(
 //Arrange
 expected = true;
 airport.planeList = [];
-testPlane = {}
+
+//Act
+airport.addPlane(testPlane);
+actual = airport.planeList.includes(testPlane);
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+//? TEST 4:3
+//* Test that you can add a plane when there are already planes at the airport
+
+console.log(`==================`);
+console.log(`Test 4:3`);
+console.log(`==================`);
+console.log(
+    `Test that you can add a plane when there are already planes at the airport`
+);
+
+//Arrange
+expected = true;
+airport.planeList = [plane1, plane2, plane3];
 
 //Act
 airport.addPlane(testPlane);
