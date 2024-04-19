@@ -157,3 +157,32 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 6
+//* 
+
+console.log(`==================`);
+console.log(`Test 6`);
+console.log(`==================`);
+console.log(
+    `Try to add a string and check that the capacity is not a string`
+);
+
+expected = true;
+testCapacity = "test";
+
+//Act
+airport.setCapacity(testCapacity);
+actual = (Number.isInteger(airport.capacity) ? true : false)
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
