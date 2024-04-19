@@ -647,3 +647,34 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 4:6
+//* Test that planes aren't added when the airport is over capacity
+
+console.log(`==================`);
+console.log(`Test 4:6`);
+console.log(`==================`);
+console.log(
+    `Test that planes aren't added when the airport is over capacity`
+);
+
+//Arrange
+expected = false;
+airport.capacity = 1;
+airport.planeList = [plane1, plane2, plane3];
+
+//Act
+airport.addPlane(testPlane);
+actual = airport.planeList.includes(testPlane);
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
