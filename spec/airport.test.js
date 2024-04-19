@@ -528,3 +528,34 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 4:2
+//* Test that the new plane is in the list
+
+console.log(`==================`);
+console.log(`Test 4:2`);
+console.log(`==================`);
+console.log(
+    `Test that the new plane is in the list`
+);
+
+//Arrange
+expected = true;
+airport.planeList = [];
+testPlane = {}
+
+//Act
+airport.addPlane(testPlane);
+actual = airport.planeList.includes(testPlane);
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
