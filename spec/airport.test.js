@@ -749,3 +749,32 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 5:2
+//* Test that the given plane is not in the list
+
+console.log(`==================`);
+console.log(`Test 5:2`);
+console.log(`==================`);
+console.log(
+    `Test that the given plane is not in the list`
+);
+
+//Arrange
+expected = false;
+
+//Act
+airport.removePlane(testPlane);
+actual = airport.planeList.includes(testPlane);
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
