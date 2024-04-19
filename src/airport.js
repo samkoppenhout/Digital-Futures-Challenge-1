@@ -11,7 +11,7 @@ const airport = {
         return this.planeList.includes(plane);
     },
     addPlane(plane) {
-        !(plane === null) && !(this.isFull()) && airport.planeList.push(plane);
+        !(plane === null) && !(this.isFull()) && !(this.searchForPlane(plane)) && airport.planeList.push(plane);
     }
 }
 

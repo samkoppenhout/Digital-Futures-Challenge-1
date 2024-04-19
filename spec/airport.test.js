@@ -678,3 +678,33 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 4:7
+//* Test that planes aren't added when they're already in the airport
+
+console.log(`==================`);
+console.log(`Test 4:7`);
+console.log(`==================`);
+console.log(
+    `Test that planes aren't added when they're already in the airport`
+);
+
+//Arrange
+airport.planeList = [plane1, plane2, plane3, testPlane];
+expected = airport.planeList.length;
+
+//Act
+airport.addPlane(testPlane);
+actual = airport.planeList.length;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
