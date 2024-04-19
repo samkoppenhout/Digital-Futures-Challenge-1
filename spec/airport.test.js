@@ -99,3 +99,32 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 4
+//* 
+
+console.log(`==================`);
+console.log(`Test 4`);
+console.log(`==================`);
+console.log(
+    `Try to add a fractional number and check that the capacity is not fractional`
+);
+
+expected = true;
+testCapacity = 2.5;
+
+//Act
+airport.setCapacity(testCapacity);
+actual = (Number.isInteger(airport.capacity) ? true : false)
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
