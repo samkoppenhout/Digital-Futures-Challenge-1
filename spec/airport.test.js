@@ -2,7 +2,7 @@ import { assertEquals } from "./test-framework/test-framework.js";
 import airport from "../src/airport.js"
 
 // Define test variables
-let expected, actual, result, testCapacity, plane1 = {}, plane2 = {}, plane3 = {}, testPlane = {};
+let expected, actual, result, testCapacity, plane1, plane2, plane3, testPlane;
 
 //Clear Up Function
 const clearUp = () => {
@@ -17,6 +17,9 @@ const clearUp = () => {
     plane3 = {};
     testPlane = {};
 }
+
+//Initialise any variables needed later using our clearUp function
+clearUp();
 
 //? USER STORY 1
 console.log(`==================`);
@@ -509,8 +512,8 @@ console.log(
 );
 
 //Arrange
-expected = airport.planeList.length + 1;
 airport.planeList = [];
+expected = airport.planeList.length + 1;
 
 //Act
 airport.addPlane(testPlane);
@@ -695,6 +698,44 @@ expected = airport.planeList.length;
 
 //Act
 airport.addPlane(testPlane);
+actual = airport.planeList.length;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+
+
+//? USER STORY 5
+console.log(`==================`);
+console.log(`USER STORY 5:`);
+console.log(`==================
+`);
+
+//? TEST 5:1
+//* Test that the number of planes has decreased by one
+
+console.log(`==================`);
+console.log(`Test 5:1`);
+console.log(`==================`);
+console.log(
+    `Test that the number of planes has decreased by one`
+);
+
+//Arrange
+airport.planeList = [testPlane];
+expected = airport.planeList.length - 1;
+
+//Act
+airport.removePlane(testPlane);
 actual = airport.planeList.length;
 
 //Assert

@@ -12,6 +12,9 @@ const airport = {
     },
     addPlane(plane) {
         !(plane === null) && !(this.isFull()) && !(this.searchForPlane(plane)) && airport.planeList.push(plane);
+    },
+    removePlane(plane) {
+        this.planeList = this.planeList.filter((query) => !(query === plane));
     }
 }
 
