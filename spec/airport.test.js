@@ -34,6 +34,36 @@ result = assertEquals(expected, actual);
 //Report
 console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clear Up
+clearUp();
+
+//? TEST 2
+//* Define the capacity previously, input a new integer and check that the capacity is now the new integer
+
+console.log(`Test 2`);
+console.log(`==================`);
+console.log(
+    `Define the capacity previously, input a new integer and check that the capacity is now the new integer`
+);
+
+//Arrange
+expected = 10;
+testCapacity = 10;
+airport.capacity = 0;
+
+//Act
+airport.setCapacity(testCapacity);
+actual = airport.capacity;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
 
 // Clear Up
 clearUp();
