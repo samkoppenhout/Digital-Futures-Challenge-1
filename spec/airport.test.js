@@ -778,3 +778,33 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 5:3
+//* Test that you can remove a plane when there are other planes at the airport
+
+console.log(`==================`);
+console.log(`Test 5:3`);
+console.log(`==================`);
+console.log(
+    `Test that you can remove a plane when there are other planes at the airport`
+);
+
+//Arrange
+airport.planeList = [plane1, plane2, plane3, testPlane];
+expected = false;
+
+//Act
+airport.removePlane(testPlane);
+actual = airport.planeList.includes(testPlane);
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
