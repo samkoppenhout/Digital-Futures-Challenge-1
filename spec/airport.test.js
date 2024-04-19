@@ -460,3 +460,31 @@ console.log(`==================
 // Clear Up
 clearUp();
 
+//? TEST 3:3
+//* Test that the function returns true if the plane is in the list of planes
+
+console.log(`==================`);
+console.log(`Test 3:3`);
+console.log(`==================`);
+console.log(
+    `Test that the function returns true if the plane is in the list of planes`
+);
+
+//Arrange
+expected = true;
+airport.planeList = [plane1,plane2,plane3,testPlane];
+
+//Act
+actual = airport.searchForPlane(testPlane);
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
