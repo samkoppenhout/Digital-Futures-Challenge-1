@@ -835,3 +835,31 @@ console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
 console.log(`==================
 `);
+
+//? TEST 5:5
+//* Test that a null variable can't be removed from the airport
+
+console.log(`==================`);
+console.log(`Test 5:5`);
+console.log(`==================`);
+console.log(
+    `Test that a null variable can't be removed from the airport`
+);
+
+//Arrange
+airport.planeList = [plane1, plane2, plane3];
+testPlane = null;
+expected = airport.planeList.length;
+
+//Act
+airport.removePlane(testPlane);
+actual = airport.planeList.length;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
