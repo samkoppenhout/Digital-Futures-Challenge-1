@@ -10,17 +10,19 @@ const clearUp = () => {
     testCapacity = undefined;
 }
 
+/*
+
 //? USER STORY 1
 console.log(`==================`);
 console.log(`USER STORY 1:`);
 console.log(`==================
 `);
 
-//? TEST 1
+//? TEST 1:1
 //* Input an integer and check that the capacity is that integer
 
 console.log(`==================`);
-console.log(`Test 1:`);
+console.log(`Test 1:1`);
 console.log(`==================`);
 console.log(
     `Input an integer and check that the capacity is that integer`
@@ -46,11 +48,11 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 2
+//? TEST 1:2
 //* Define the capacity previously, input a new integer and check that the capacity is now the new integer
 
 console.log(`==================`);
-console.log(`Test 2:`);
+console.log(`Test 1:2`);
 console.log(`==================`);
 console.log(
     `Define the capacity previously, input a new integer and check that the capacity is now the new integer`
@@ -77,11 +79,11 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 3
+//? TEST 1:3
 //* 
 
 console.log(`==================`);
-console.log(`Test 3`);
+console.log(`Test 1:3`);
 console.log(`==================`);
 console.log(
     `Try to add a negative number and check that the capacity is not negative`
@@ -106,11 +108,11 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 4
+//? TEST 1:4
 //* 
 
 console.log(`==================`);
-console.log(`Test 4`);
+console.log(`Test 1:4`);
 console.log(`==================`);
 console.log(
     `Try to add a fractional number and check that the capacity is not fractional`
@@ -135,11 +137,11 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 5
+//? TEST 1:5
 //* 
 
 console.log(`==================`);
-console.log(`Test 5`);
+console.log(`Test 1:5`);
 console.log(`==================`);
 console.log(
     `Try to add a null value and check that the capacity is not null`
@@ -164,11 +166,11 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 6
+//? TEST 1:6
 //* 
 
 console.log(`==================`);
-console.log(`Test 6`);
+console.log(`Test 1:6`);
 console.log(`==================`);
 console.log(
     `Try to add a string and check that the capacity is not a string`
@@ -180,6 +182,46 @@ testCapacity = "test";
 //Act
 airport.setCapacity(testCapacity);
 actual = (Number.isInteger(airport.capacity) ? true : false)
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+
+
+*/
+
+
+//? USER STORY 2
+console.log(`==================`);
+console.log(`USER STORY 2:`);
+console.log(`==================
+`);
+
+//? TEST 2:1
+//* Test that the airport reports not full when no planes have been added
+
+console.log(`==================`);
+console.log(`Test 2:1`);
+console.log(`==================`);
+console.log(
+    `Test that the airport reports not full when no planes have been added`
+);
+
+//Arrange
+expected = false;
+airport.capacity = 10;
+
+//Act
+actual = airport.isFull();
 
 //Assert
 result = assertEquals(expected, actual);
