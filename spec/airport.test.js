@@ -808,3 +808,30 @@ console.log(`==================
 
 // Clear Up
 clearUp();
+
+//? TEST 5:4
+//* Test that you can't remove planes which aren't in the airport
+
+console.log(`==================`);
+console.log(`Test 5:4`);
+console.log(`==================`);
+console.log(
+    `Test that you can't remove planes which aren't in the airport`
+);
+
+//Arrange
+airport.planeList = [plane1, plane2, plane3];
+expected = airport.planeList.length;
+
+//Act
+airport.removePlane(testPlane);
+actual = airport.planeList.length;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
