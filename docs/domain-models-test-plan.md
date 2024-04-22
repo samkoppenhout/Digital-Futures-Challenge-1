@@ -1,5 +1,7 @@
 # Domain Models and Test Plan
 
+MAKE SURE TO ADD A CAPACITY LIMIT TO MORE THAN OR EQUAL TO THE NUMBER OF PLANES CURRENTLY AT THE AIRPORT
+
 Core Features:
 User stories:
 
@@ -22,3 +24,7 @@ User stories:
 5.  As an air traffic controller
     I would like to remove a plane from the airport model
     So I can track the instruction for it to take off
+
+call start and test in the package.json
+
+import .basket.spec.js in the specrunner (thats all you need)
