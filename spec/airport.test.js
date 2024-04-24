@@ -1058,6 +1058,39 @@ clearUp();
 
 
 
+//? USER STORY 7
+console.log(`==================`);
+console.log(`USER STORY 7:`);
+console.log(`==================
+`);
 
+//? TEST 7:1
+//* Try to remove the plane while isStormy is true and check that it is not
 
+console.log(`==================`);
+console.log(`Test 7:1`);
+console.log(`------------------`);
+console.log(
+    `Try to add the plane while isStormy is true and check that it is not`
+);
 
+//Arrange
+airport.planeList = [plane1, plane2, plane3, testPlane];
+airport.isStormy = true;
+expected = airport.planeList.length;
+
+//Act
+airport.removePlane(testPlane);
+actual = airport.planeList.length;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
