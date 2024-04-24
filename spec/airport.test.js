@@ -10,6 +10,7 @@ const clearUp = () => {
     actual = undefined;
     result = undefined;
     testCapacity = undefined;
+    airport.capacity = 10;
     airport.planeList = [];
     plane1 = {};
     plane2 = {};
@@ -226,6 +227,66 @@ testCapacity = "test";
 //Act
 airport.setCapacity(testCapacity);
 actual = (Number.isInteger(airport.capacity) ? true : false)
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+//? TEST 1:8
+//* Test that the capacity can't be set below the number of planes currently at the airport
+
+console.log(`==================`);
+console.log(`Test 1:8`);
+console.log(`------------------`);
+console.log(
+    `Test that the capacity can't be set below the number of planes currently at the airport`
+);
+
+//Arrange
+airport.planeList = [plane1, plane2, plane3];
+expected = 10;
+
+//Act
+airport.setCapacity(2);
+actual = airport.capacity;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+//? TEST 1:9
+//* Test that the capacity can be set to the number of planes currently at the airport
+
+console.log(`==================`);
+console.log(`Test 1:9`);
+console.log(`------------------`);
+console.log(
+    `Test that the capacity can be set to the number of planes currently at the airport`
+);
+
+//Arrange
+airport.planeList = [plane1, plane2, plane3];
+expected = 3;
+
+//Act
+airport.setCapacity(3);
+actual = airport.capacity;
 
 //Assert
 result = assertEquals(expected, actual);
