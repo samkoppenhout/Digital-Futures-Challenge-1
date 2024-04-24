@@ -27,7 +27,7 @@ const airport = {
     },
 
     removePlane(plane) {
-        this.planeList = this.planeList.filter((query) => !(query === plane));
+        !this.isStormy && (this.planeList = this.planeList.filter((query) => !(query === plane)));
     }
 }
 
