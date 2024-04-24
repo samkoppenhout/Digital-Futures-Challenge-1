@@ -4,6 +4,8 @@ const airport = {
 
     planeList: [],
 
+    isStormy: false,
+
 
     // Methods
     setCapacity(newCapacity) {
@@ -21,7 +23,7 @@ const airport = {
     },
 
     addPlane(plane) {
-        !(plane === null) && !(this.isFull()) && !(this.searchForPlane(plane)) && airport.planeList.push(plane);
+        !(plane === null) && !(this.isFull()) && !(this.searchForPlane(plane)) && !this.isStormy && airport.planeList.push(plane);
     },
 
     removePlane(plane) {

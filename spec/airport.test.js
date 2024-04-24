@@ -12,6 +12,7 @@ const clearUp = () => {
     testCapacity = undefined;
     airport.capacity = 10;
     airport.planeList = [];
+    airport.isStormy = false;
     plane1 = {};
     plane2 = {};
     plane3 = {};
@@ -924,6 +925,9 @@ console.log(result ? `Pass` : `Fail`);
 console.log(`==================
 `);
 
+// Clear Up
+clearUp();
+
 //? TEST 5:5
 //* Test that a null variable can't be removed from the airport
 
@@ -951,4 +955,109 @@ console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
 console.log(`==================
 `);
+
+// Clear Up
+clearUp();
+
+
+
+//? USER STORY 6
+console.log(`==================`);
+console.log(`USER STORY 6:`);
+console.log(`==================
+`);
+
+//? TEST 6:1
+//* Test that the weather is intialised to not stormy
+
+
+console.log(`==================`);
+console.log(`Test 6:1`);
+console.log(`------------------`);
+console.log(
+    `Test that the weather is intialised to not stormy`
+);
+
+//Arrange
+expected = false;
+
+//Act
+actual = airport.isStormy;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+//? TEST 6:2
+//* Try to add the plane while isStormy is true and check that it is not
+
+console.log(`==================`);
+console.log(`Test 6:2`);
+console.log(`------------------`);
+console.log(
+    `Try to add the plane while isStormy is true and check that it is not`
+);
+
+//Arrange
+airport.isStormy = true;
+expected = airport.planeList.length;
+
+//Act
+airport.addPlane(testPlane);
+actual = airport.planeList.length;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+//? TEST 6:3
+//* Try to add the plane while isStormy is false and check that it is
+
+console.log(`==================`);
+console.log(`Test 6:3`);
+console.log(`------------------`);
+console.log(
+    `Try to add the plane while isStormy is false and check that it is`
+);
+
+//Arrange
+airport.isStormy = false;
+expected = airport.planeList.length + 1;
+
+//Act
+airport.addPlane(testPlane);
+actual = airport.planeList.length;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+
+
+
+
 

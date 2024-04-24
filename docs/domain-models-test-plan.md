@@ -24,3 +24,25 @@ User stories:
 5.  As an air traffic controller
     I would like to remove a plane from the airport model
     So I can track the instruction for it to take off
+
+Additional features:
+
+1. Prevent Landing in Stormy Weather
+   As an Airport operator
+   I want to prevent planes from landing if the weather is stormy
+   So that I can ensure the safety of incoming planes
+
+   Acceptance Criteria:
+   Given that the weather is stormy
+   When a Plane attempts to land at the Airport
+   Then the Plane should not be able to land
+
+2. Prevent Takeoff in Stormy Weather
+   As an Airport operator
+   I want to prevent planes from taking off if the weather is stormy
+   So that I can ensure the safety of outgoing planes
+
+   Acceptance Criteria:
+   Given that the weather is stormy
+   When a Plane attempts to take off from the Airport
+   Then the Plane should not be able to take off
