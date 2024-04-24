@@ -9,7 +9,6 @@ const clearUp = () => {
     expected = undefined;
     actual = undefined;
     result = undefined;
-    airport.capacity = undefined;
     testCapacity = undefined;
     airport.planeList = [];
     plane1 = {};
@@ -28,11 +27,39 @@ console.log(`==================
 `);
 
 //? TEST 1:1
-//* Input an integer and check that the capacity is that integer
+//* Test that the capacity initialises to 10
 
 console.log(`==================`);
 console.log(`Test 1:1`);
+console.log(`------------------`);
+console.log(
+    `Test that the capacity initialises to 10`
+);
+
+//Arrange
+expected = 10;
+
+//Act
+actual = airport.capacity;
+
+//Assert
+result = assertEquals(expected, actual);
+
+//Report
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================
+`);
+
+// Clear Up
+clearUp();
+
+//? TEST 1:2
+//* Input an integer and check that the capacity is that integer
+
 console.log(`==================`);
+console.log(`Test 1:2`);
+console.log(`------------------`);
 console.log(
     `Input an integer and check that the capacity is that integer`
 );
@@ -57,12 +84,12 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 1:2
+//? TEST 1:3
 //* Define the capacity previously, input a new integer and check that the capacity is now the new integer
 
 console.log(`==================`);
-console.log(`Test 1:2`);
-console.log(`==================`);
+console.log(`Test 1:3`);
+console.log(`------------------`);
 console.log(
     `Define the capacity previously, input a new integer and check that the capacity is now the new integer`
 );
@@ -88,12 +115,12 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 1:3
+//? TEST 1:4
 //* 
 
 console.log(`==================`);
-console.log(`Test 1:3`);
-console.log(`==================`);
+console.log(`Test 1:4`);
+console.log(`------------------`);
 console.log(
     `Try to add a negative number and check that the capacity is not negative`
 );
@@ -119,12 +146,12 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 1:4
+//? TEST 1:5
 //* 
 
 console.log(`==================`);
-console.log(`Test 1:4`);
-console.log(`==================`);
+console.log(`Test 1:5`);
+console.log(`------------------`);
 console.log(
     `Try to add a fractional number and check that the capacity is not fractional`
 );
@@ -150,12 +177,12 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 1:5
+//? TEST 1:6
 //* 
 
 console.log(`==================`);
-console.log(`Test 1:5`);
-console.log(`==================`);
+console.log(`Test 1:6`);
+console.log(`------------------`);
 console.log(
     `Try to add a null value and check that the capacity is not null`
 );
@@ -181,12 +208,12 @@ console.log(`==================
 // Clear Up
 clearUp();
 
-//? TEST 1:6
+//? TEST 1:7
 //* 
 
 console.log(`==================`);
-console.log(`Test 1:6`);
-console.log(`==================`);
+console.log(`Test 1:7`);
+console.log(`------------------`);
 console.log(
     `Try to add a string and check that the capacity is not a string`
 );
@@ -225,7 +252,7 @@ console.log(`==================
 
 console.log(`==================`);
 console.log(`Test 2:1`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the airport reports not full when no planes have been added`
 );
@@ -254,7 +281,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 2:2`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the airport reports not full when the number of planes is between 0 and the given capacity`
 );
@@ -284,7 +311,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 2:3`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the airport reports full when there more planes than the given capacity`
 );
@@ -314,7 +341,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 2:4`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the airport reports full when there is the same number of planes as the given capacity`
 );
@@ -344,7 +371,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 2:5`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the airport reports full when the capacity is 0 and the list of planes is not empty`
 );
@@ -374,7 +401,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 2:6`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the airport reports full when the capacity and number of planes is 0 and the list of planes is empty`
 );
@@ -411,7 +438,7 @@ console.log(`==================
 
 console.log(`==================`);
 console.log(`Test 3:1`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the function returns false if the plane list is empty`
 );
@@ -440,7 +467,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 3:2`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the function returns false if the plane list is not empty but does not contain the given plane`
 );
@@ -469,7 +496,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 3:3`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the function returns true if the plane is in the list of planes`
 );
@@ -506,7 +533,7 @@ console.log(`==================
 
 console.log(`==================`);
 console.log(`Test 4:1`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the number of planes has increased by one`
 );
@@ -536,7 +563,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 4:2`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the new plane is in the list`
 );
@@ -565,7 +592,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 4:3`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that you can add a plane when there are already planes at the airport`
 );
@@ -595,7 +622,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 4:4`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that a null variable can't be added to the airport`
 );
@@ -625,7 +652,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 4:5`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that planes aren't added when the airport is full`
 );
@@ -656,7 +683,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 4:6`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that planes aren't added when the airport is over capacity`
 );
@@ -687,7 +714,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 4:7`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that planes aren't added when they're already in the airport`
 );
@@ -725,7 +752,7 @@ console.log(`==================
 
 console.log(`==================`);
 console.log(`Test 5:1`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the number of planes has decreased by one`
 );
@@ -755,7 +782,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 5:2`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that the given plane is not in the list`
 );
@@ -784,7 +811,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 5:3`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that you can remove a plane when there are other planes at the airport`
 );
@@ -814,7 +841,7 @@ clearUp();
 
 console.log(`==================`);
 console.log(`Test 5:4`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that you can't remove planes which aren't in the airport`
 );
@@ -841,7 +868,7 @@ console.log(`==================
 
 console.log(`==================`);
 console.log(`Test 5:5`);
-console.log(`==================`);
+console.log(`------------------`);
 console.log(
     `Test that a null variable can't be removed from the airport`
 );
@@ -863,3 +890,4 @@ console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
 console.log(`==================
 `);
+

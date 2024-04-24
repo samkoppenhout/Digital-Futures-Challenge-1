@@ -24,7 +24,3 @@ User stories:
 5.  As an air traffic controller
     I would like to remove a plane from the airport model
     So I can track the instruction for it to take off
-
-call start and test in the package.json
-
-import .basket.spec.js in the specrunner (thats all you need)
