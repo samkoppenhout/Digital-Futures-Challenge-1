@@ -49,9 +49,13 @@ In conclusion, this software represents a massive potential for increased effici
 
 # Domain Models and Test Plan
 
-## Core Features:
+## Use of Agile to Plan
 
-### User stories:
+In order to approach this challenge, the agile concept of a kanban board was used to track development and progress. A screenshot of the board is included in "image-1", showing a detailed user story with all of its associated tests written out and including a link to its domain model and a 'definition of done'. This was completed in full for all of the user stories on the board.
+
+## User Stories:
+
+### Core Features:
 
 User Story 1:
 
@@ -83,9 +87,9 @@ User Story 5:
 - I would like to remove a plane from the airport model
 - So I can track the instruction for it to take off
 
-## Additional features:
+### Additional features:
 
-Generative AI was used in the development of the user following user stories and their domain models. Alongside their user stories, the AI also provided acceptance criteria which have been included below as they were deemed to be relevant and helpful to the task.
+Generative AI was used in the development of the user following user stories. Alongside these, the AI also provided acceptance criteria which have been included below as they were deemed to be relevant and helpful to the task.
 
 Prevent Landing in Stormy Weather:
 
@@ -99,7 +103,7 @@ Acceptance Criteria:
 - When a Plane attempts to land at the Airport
 - Then the Plane should not be able to land
 
-Prevent Take-off in Stormy Weather
+Prevent Take-off in Stormy Weather:
 
 - As an Airport operator
 - I want to prevent planes from taking off if the weather is stormy
@@ -110,3 +114,14 @@ Acceptance Criteria:
 - Given that the weather is stormy
 - When a Plane attempts to take off from the Airport
 - Then the Plane should not be able to take off
+
+## Domain Models
+
+The domain models used for the core features can be seen in "image-2". The domain models for the additional features are available in "image-3".
+
+# Images
+
+| Image Name | File Path | Description |
+| image-1 |./docs/image-1| A screenshot of the kanban used to track project progress |
+| image-2 |./docs/image-2| A screenshot of the domain models for the core features |
+| image-3 |./docs/image-3| A screenshot of the domain models for the core features |
