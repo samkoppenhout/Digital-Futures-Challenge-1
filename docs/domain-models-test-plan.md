@@ -49,10 +49,9 @@ In conclusion, this software represents a massive potential for increased effici
 
 # Domain Models and Test Plan
 
-MAKE SURE TO ADD A CAPACITY LIMIT TO MORE THAN OR EQUAL TO THE NUMBER OF PLANES CURRENTLY AT THE AIRPORT
+## Core Features:
 
-Core Features:
-User stories:
+# User stories:
 
 1.  As an airport official
     I would like to set the maximum capacity of the airport
@@ -74,7 +73,9 @@ User stories:
     I would like to remove a plane from the airport model
     So I can track the instruction for it to take off
 
-Additional features:
+# Additional features:
+
+Generative AI was used in the development of the user following user stories and their domain models. Alongside their user stories, the AI also provided acceptance criteria which have been included below as they were deemed to be relevant and helpful to the task.
 
 1. Prevent Landing in Stormy Weather
    As an Airport operator
