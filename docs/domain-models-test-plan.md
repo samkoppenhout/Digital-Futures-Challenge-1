@@ -87,7 +87,7 @@ User Story 5:
 
 Generative AI was used in the development of the user following user stories and their domain models. Alongside their user stories, the AI also provided acceptance criteria which have been included below as they were deemed to be relevant and helpful to the task.
 
-1. Prevent Landing in Stormy Weather:
+Prevent Landing in Stormy Weather:
 
 - As an Airport operator
 - I want to prevent planes from landing if the weather is stormy
@@ -99,7 +99,7 @@ Acceptance Criteria:
 - When a Plane attempts to land at the Airport
 - Then the Plane should not be able to land
 
-2. Prevent Take-off in Stormy Weather
+Prevent Take-off in Stormy Weather
 
 - As an Airport operator
 - I want to prevent planes from taking off if the weather is stormy
