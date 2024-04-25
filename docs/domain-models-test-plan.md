@@ -73,7 +73,7 @@ In conclusion, this software represents a massive potential for increased effici
     I would like to remove a plane from the airport model
     So I can track the instruction for it to take off
 
-### Additional features:
+## Additional features:
 
 Generative AI was used in the development of the user following user stories and their domain models. Alongside their user stories, the AI also provided acceptance criteria which have been included below as they were deemed to be relevant and helpful to the task.
 
