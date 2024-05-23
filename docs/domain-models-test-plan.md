@@ -121,8 +121,8 @@ The domain models used for the core features can be seen in "image-2". The domai
 
 # Images
 
-| Image Name | File Path                 | Description                                               |
-| ---------- | ------------------------- | --------------------------------------------------------- |
-| image-1    | ./docs/images/image-1.png | A screenshot of the kanban used to track project progress |
-| image-2    | ./docs/images/image-2.png | A screenshot of the domain models for the core features   |
-| image-3    | ./docs/images/image-3.png | A screenshot of the domain models for the core features   |
+| Image Name | File Path                 | Description                                                   |
+| ---------- | ------------------------- | ------------------------------------------------------------- |
+| image-1    | ./docs/images/image-1.png | A screenshot of the kanban used to track project progress     |
+| image-2    | ./docs/images/image-2.png | A screenshot of the domain models for the core features       |
+| image-3    | ./docs/images/image-3.png | A screenshot of the domain models for the additional features |
